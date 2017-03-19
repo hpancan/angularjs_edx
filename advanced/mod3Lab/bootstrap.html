@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <title>Bootstrap</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+   </head>
+
+   <body ng-app='app'>
+      <div class="container">
+         <h1>Directives</h1>
+         <button class='btn btn-default'>Default</button>
+         <button class='btn btn-primary'>Primary</button>
+         <button class='btn btn-info'>Info</button>
+         <button class='btn btn-success'>Success</button>
+         <button class='btn btn-warning'>Warning</button>
+         <button class='btn btn-danger'>Danger</button>
+      </div>
+      
+      <div class="input-group">
+        <span class="input-group-addon">$</span>
+        <input type="text" class="form-control">
+      </div>
+      
+      
+      <div class='container'>
+        <div class='row'>
+            <div class='col-md-6 col-xs-12'>
+                Bootstrap Column A
+            </div>
+            <div class='col-md-6 col-xs-12'>
+                Bootstrap Column B
+            </div>
+        </div>
+      </div>
+
+      <div class='container' ng-controller='uibController'>
+        <uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</uib-alert>
+      </div>
+      
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+      <script src="./script/ui-bootstrap-tpls-2.5.0.js"></script>
+      <script src="./app/app.js"></script>
+      <script src="./app/uibController.js"></script>
+   </body>
+</html>
