@@ -17,6 +17,13 @@ angular.module('app')
           vm.alerts.splice(index,1);
       };
       
+      vm.datepickerOptions = {
+          minDate: new Date(), 
+          showWeeks: false
+      };
+      
+      vm.selectedDate = new Date();
+      
       function addAlert(type, text) {
           vm.alerts.push({type:type, text:text});
       }

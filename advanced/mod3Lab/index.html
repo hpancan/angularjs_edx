@@ -49,6 +49,13 @@
             <button type="button" class="btn btn-danger" ng-click="vm.addDanger()">Add Danger</button>
             <uib-alert class='alert-animation' ng-repeat='alert in vm.alerts' type='{{alert.type}}' close='vm.dismissAlert($index)'>{{alert.text}}</uib-alert>
        </div>
+       
+       <div class='form-group'>
+            <pre>{{vm.selectedDate | date:'MMM dd, yyyy'}}</pre>
+            <div>
+                <div uib-datepicker ng-model='vm.selectedDate' datepicker-options='vm.datepickerOptions'></div>
+            </div>
+       </div>
     </div> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>    
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
